@@ -7,7 +7,7 @@ public class SalesList {
 	//declare an array list of sale type to hold each sale which ends by end keyword
 	ArrayList<Sale> al=new ArrayList<Sale>();
 	Scanner scanner=new Scanner(System.in);
-	String temp=scanner.nextLine();//initialize the variable to the first line the program reads in
+	String temp;//initialize the variable to the first line the program reads in
 	private int number=0;//used to store the total number of items sold in the sale list
 	private double totalPrice=0;//used to store the total price of items sold in the sale list
 	
@@ -15,6 +15,7 @@ public class SalesList {
 	public void calculate()
 	{
 		System.out.println("Please input the sale of the whole day(sale list)");
+		temp=scanner.nextLine();
 		while(temp.equalsIgnoreCase("off")==false)//loop to store each sale
 		{
 			Sale s=new Sale();
